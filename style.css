@@ -238,6 +238,59 @@ background: var(--primary-color);
 .about-section .social-link-list .social-link:hover {
     color: var(--secondary-color);
 }
+
+/*--Menu-Section Styling--*/
+.menu-section{
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-section .menu-list .menu-items{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100%/ 3 - 110px);
+
+}
+
+.menu-section .menu-list .menu-items .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.menu-section .menu-list .menu-items .name{
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+.menu-section .menu-list .menu-items .text{
+    font-size: var( --font-size-m);
+}
+/* Responsive meddia query code for max width 1024px */
+
+
+@media screen and (max-width: 1024px){
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-items{
+        width: calc(100% / 3 - 60px);
+    }
+
+}
+
 /* Responsive meddia query code for max width 900px */
 
 
@@ -340,5 +393,22 @@ background: var(--primary-color);
         max-width: 250px;
         aspect-ratio: 1;
     }
+    .menu-list .menu-list{
+        gap: 30px;
+    }
+    .menu-section .menu-list .menu-items{
+        width: calc(100% / 2 - 30px);
+    }
+    .menu-section .menu-list .menu-items .menu-image{
+        max-width: 200px;
+    }
+}
+@media  screen and (max-width: 640px) {
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+.menu-section .menu-list .menu-items{
+    width: 100%;
+}
     
 }
